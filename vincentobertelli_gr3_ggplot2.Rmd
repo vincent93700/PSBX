@@ -1,0 +1,33 @@
+---
+title: "dossier GGPLOT2"
+author: "vincent obertelli"
+date: "12/6/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+Dans ce document, nous allons découvrir les fonctions et particularités du package ggplot2. 
+
+Pour commencer, nous devons d'abord installer le package. La façon la plus simple de le faire est d'installer le package ggplot2 :
+
+install.packages("ggplot2")
+
+
+Ce package va nous permettre de créer des visuels et graphique pour comprendre plus facilement des jeux de données. Nous allons voir maintenant comment utiliser ce package.
+
+
+```{r}
+library("ggplot2")
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point(aes(color = Species)) +
+  scale_color_viridis_d() +
+  theme_minimal()
+```
+
+
+
+
+Nous avons utilisé pour cet exemple la base de données Iris.
+
+
